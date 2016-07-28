@@ -26,17 +26,12 @@ TARGET_BOARD_INFO_FILE := $(DEVICE_PATH)/board-info.txt
 
 # Kernel
 TARGET_KERNEL_CONFIG := falcon_defconfig
+TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-linux-androideabi-
 
 # Init
 TARGET_INIT_VENDOR_LIB := libinit_falcon
 TARGET_RECOVERY_DEVICE_MODULES := libinit_falcon
 TARGET_UNIFIED_DEVICE := true
-
-# Kernel Toolchain
-KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-eabi-5.3/bin
-KERNEL_TOOLCHAIN_PREFIX := arm-eabi-
-# Rom Toolchain
-TARGET_GCC_VERSION_EXP := 5.3
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 10485760
